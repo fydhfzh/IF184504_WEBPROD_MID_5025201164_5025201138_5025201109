@@ -41,7 +41,7 @@
             <form class="form-inline d-sm-block d-md-none" method="POST" action="/logout">
                 @csrf
                 @auth
-                <a href="/dashboard" class="rounded bg-warning my-2 my-sm-0 px-4 py-2 text-decoration-none text-light">Hello, <span class=" font-weight-bold">Fayyadh Hafizh</span></a>
+                <a href="/dashboard" class="rounded bg-warning my-2 my-sm-0 px-4 py-2 text-decoration-none text-light">Hello, <span class=" font-weight-bold">{{ Auth::user()->first_name . ' ' . Auth::user()->last_name }}</span></a>
                 <button type="submit" class="btn btn-danger ml-3" style="height: 38px;">Logout</button>
                 @endauth
                 @guest
